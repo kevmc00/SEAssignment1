@@ -5,6 +5,7 @@
  */
 package com.kevin.assignment1;
 
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -39,8 +40,10 @@ public class CourseTest {
 
     @Test
     public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Course course = new Course("Electronic and Computer Engineering");
+        Module module = new Module("Software Engineering III", "CT417");
+        course.addModule(module);
+        ArrayList<Module> modules = course.getModules();
+        assertEquals("Software Engineering III", modules.get(0).getName());
     }
-    
 }

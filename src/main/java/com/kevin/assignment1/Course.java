@@ -6,14 +6,16 @@ import java.util.ArrayList;
  */
 
 public class Course {
-    private ArrayList students;
-    private ArrayList modules;
+    private ArrayList<Student> students = new ArrayList();
+    private ArrayList<Module> modules = new ArrayList();
     private String name;
 
     public Course(String n){
         name = n;
     }
-    
+    public void addModule(Module m){
+        modules.add(m);
+    }
     public String getName(){
         return name;
     }

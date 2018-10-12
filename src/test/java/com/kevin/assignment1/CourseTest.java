@@ -42,8 +42,11 @@ public class CourseTest {
     public void testSomeMethod() {
         Course course = new Course("Electronic and Computer Engineering");
         Module module = new Module("Software Engineering III", "CT417");
+        Module module2 = new Module("System on Chip Design", "EE451");
         course.addModule(module);
+        course.addModule(module2);
         ArrayList<Module> modules = course.getModules();
         assertEquals("Software Engineering III", modules.get(0).getName());
+        assertEquals("EE451", modules.get(1).getID());
     }
 }

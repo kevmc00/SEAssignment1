@@ -42,7 +42,7 @@ public class StudentTest {
      * Test of addModule method, of class Student.
      */
     @Test
-    public void testAddModule() {
+    public void testMethods() {
         Student stu = new Student("Peter", 12, LocalDate.now());
         String username = stu.getUsername();
         String correct = "Peter12";

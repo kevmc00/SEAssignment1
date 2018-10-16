@@ -6,6 +6,7 @@
 package com.kevin.assignment1;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,7 +44,8 @@ public class StudentTest {
      */
     @Test
     public void testMethods() {
-        Student stu = new Student("Peter", 12, LocalDate.now());
+        LocalDate dob = new LocalDate.parse("1997-05-02");
+        Student stu = new Student("Peter", new LocalDate.parse("1997-5-2"));
         String username = stu.getUsername();
         String correct = "Peter12";
         assertEquals(username, correct);

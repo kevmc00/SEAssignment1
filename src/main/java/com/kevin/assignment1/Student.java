@@ -7,6 +7,7 @@ package com.kevin.assignment1;
 
 import java.time.*;
 import java.util.ArrayList;
+import java.time.temporal.ChronoUnit;
 
 
 /**
@@ -23,9 +24,9 @@ public class Student {
     private String username;
     private ArrayList modules;
     
-    public Student(String n, int a, LocalDate d){
+    public Student(String n, LocalDate d){
         name = n;
-        age = a;
+        age = Math.toIntExact(ChronoUnit.YEARS.between(d, LocalDate.now()));
         DOB = d;
         IDcount++;
         ID = IDcount;

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Kevin
  */
-class Module {
+public class Module {
     
     private String name;
     private String id;

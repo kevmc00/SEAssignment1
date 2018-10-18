@@ -22,7 +22,7 @@ public class Student {
     private LocalDate DOB;
     private int ID;
     private String username;
-    private ArrayList modules;
+    private ArrayList<Module> modules = new ArrayList<Module>();
     
     public Student(String n, LocalDate d){
         name = n;

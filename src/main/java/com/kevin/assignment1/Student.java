@@ -22,15 +22,18 @@ public class Student {
     private LocalDate DOB;
     private int ID;
     private String username;
-    private ArrayList<Module> modules = new ArrayList<Module>();
+    private ArrayList<Module> modules;
+    private Course course;
     
-    public Student(String n, LocalDate d){
+    public Student(String n, LocalDate d, Course c){
         name = n;
         age = Math.toIntExact(ChronoUnit.YEARS.between(d, LocalDate.now()));
         DOB = d;
+        course = c;
         IDcount++;
         ID = IDcount;
         username = getUsername();
+        modules = course.getModules();
     }
     
     public String getName(){
@@ -53,11 +56,12 @@ public class Student {
         return name + Integer.toString(age);
     }
     
-    public void addModule(Module m){
-        modules.add(m);
-    }
     
     public ArrayList getModules(){
         return modules;
+    }
+    
+    public Course getCourse(){
+        return course;
     }
 }

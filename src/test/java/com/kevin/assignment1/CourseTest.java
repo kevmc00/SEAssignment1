@@ -5,6 +5,7 @@
  */
 package com.kevin.assignment1;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -45,7 +46,11 @@ public class CourseTest {
         Module module2 = new Module("System on Chip Design", "EE451");
         course.addModule(module);
         course.addModule(module2);
+        
+        Student test = new Student("kevin", LocalDate.parse("1997-05-02"), course);
         ArrayList<Module> modules = course.getModules();
+        ArrayList<Student> stu = course.getStudents();
+        assertEquals(stu.get(0).getName(), "kevin");
         assertEquals("Software Engineering III", modules.get(0).getName());
         assertEquals("EE451", modules.get(1).getID());
     }

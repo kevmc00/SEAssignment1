@@ -19,6 +19,9 @@ public class Course {
     
     public void addStudent(Student s){
         students.add(s);
+        for (Module m : modules){
+            m.addStudent(s);
+        }
     }
     public String getName(){
         return name;

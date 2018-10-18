@@ -44,7 +44,8 @@ public class StudentTest {
      */
     @Test
     public void testMethods() {
-        Student stu = new Student("Peter", LocalDate.parse("1997-05-02"));
+        Course course = new Course("test");
+        Student stu = new Student("Peter", LocalDate.parse("1997-05-02"), course);
         String username = stu.getUsername();
         String correct = "Peter21";
         assertEquals(username, correct);

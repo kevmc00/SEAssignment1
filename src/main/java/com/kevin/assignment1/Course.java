@@ -6,8 +6,8 @@ import java.util.ArrayList;
  */
 
 public class Course {
-    private ArrayList<Student> students = new ArrayList();
-    private ArrayList<Module> modules = new ArrayList();
+    private ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<Module> modules = new ArrayList<Module>();
     private String name;
 
     public Course(String n){

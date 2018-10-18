@@ -15,7 +15,7 @@ public class Module {
     
     private String name;
     private String id;
-    private ArrayList students;
+    private ArrayList<Student> students = new ArrayList<Student>();
     
     
     public Module(String n, String i){

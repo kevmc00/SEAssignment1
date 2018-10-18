@@ -30,6 +30,7 @@ public class Student {
         age = Math.toIntExact(ChronoUnit.YEARS.between(d, LocalDate.now()));
         DOB = d;
         course = c;
+        course.addStudent(this);
         IDcount++;
         ID = IDcount;
         username = getUsername();

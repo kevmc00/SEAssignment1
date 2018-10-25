@@ -44,7 +44,7 @@ public class StudentTest {
      */
     @Test
     public void testMethods() {
-        Course course = new Course("test");
+        Course course = new Course("test",LocalDate.parse("2018-09-01"),LocalDate.parse("2018-03-31"));
         Student stu = new Student("Peter", LocalDate.parse("1997-05-02"), course);
         String username = stu.getUsername();
         String correct = "Peter21";

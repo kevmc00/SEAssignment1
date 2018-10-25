@@ -41,7 +41,7 @@ public class CourseTest {
 
     @Test
     public void testSomeMethod() {
-        Course course = new Course("Electronic and Computer Engineering");
+        Course course = new Course("Electronic and Computer Engineering",LocalDate.parse("2018-09-01"),LocalDate.parse("2018-03-31"));
         Module module = new Module("Software Engineering III", "CT417");
         Module module2 = new Module("System on Chip Design", "EE451");
         course.addModule(module);

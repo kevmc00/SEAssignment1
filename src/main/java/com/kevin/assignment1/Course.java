@@ -1,5 +1,6 @@
 package com.kevin.assignment1;
 import java.util.ArrayList;
+import java.time.LocalDate;
 /**
  *
  * @author Kevin
@@ -9,10 +10,14 @@ public class Course {
     //Create variables
     private ArrayList<Module> modules = new ArrayList<Module>();
     private ArrayList<Student> students = new ArrayList<Student>();
+    private LocalDate start;
+    private LocalDate end;
     private String name;
 
-    public Course(String n){
+    public Course(String n, LocalDate s, LocalDate e){
         name = n;       //Add course name
+        start = s;      //Add course start date
+        end = e;        //Add course end date
     }
     
     //Add Module to Course
